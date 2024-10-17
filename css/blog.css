@@ -1,0 +1,198 @@
+/* General Reset: Normalize styles across browsers */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Smooth scrolling behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Set a clean font */
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for readability */
+    line-height: 1.6; /* Increase line height for better readability */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Styles for anchor links */
+a {
+    text-decoration: none; /* Remove underline from links by default */
+    color: inherit; /* Inherit text color from parent element */
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Navigation Bar Styles */
+header {
+    background-color: #222; /* Dark background for header */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to top of viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 10px 0; /* Vertical padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center align items */
+}
+
+/* List item styles */
+nav ul li {
+    margin: 0 15px; /* Horizontal margin between items */
+}
+
+/* Link styles in navigation */
+nav ul li a {
+    color: #fff; /* White text for links */
+    font-size: 18px; /* Font size for navigation links */
+    padding: 10px 15px; /* Padding around links */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions for color changes */
+    text-decoration: underline;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #f39c12; /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Blog Section Styles */
+#blog {
+    max-width: 1100px; /* Maximum width for the blog section */
+    margin: 120px auto 50px auto; /* Center the blog section and push below nav */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Main blog title styles */
+#blog h1 {
+    font-size: 3rem; /* Large font size for main title */
+    text-align: center; /* Center align title */
+    margin-bottom: 50px; /* Margin below title */
+    color: #333; /* Dark text color */
+    font-weight: 700; /* Bold font weight */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+}
+
+/* Styles for each article */
+article {
+    background-color: #fff; /* White background for articles */
+    margin-bottom: 40px; /* Margin below each article */
+    padding: 30px; /* Padding inside articles */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Article title styles */
+article h2 {
+    font-size: 2rem; /* Font size for article titles */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Margin below titles */
+    font-weight: 600; /* Semi-bold font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Paragraph styles in articles */
+article p {
+    font-size: 1.15rem; /* Font size for article paragraphs */
+    margin-bottom: 20px; /* Margin below paragraphs */
+    line-height: 1.8; /* Increase line height for readability */
+    color: #666; /* Grey text color */
+}
+
+/* Emphasized text styles in articles */
+article em {
+    color: #999; /* Lighter grey for emphasized text */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    display: block; /* Display as block element */
+    margin-bottom: 15px; /* Margin below emphasized text */
+}
+
+/* Hover effect for articles */
+article:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Hover effects for article titles and paragraphs */
+article:hover h2 {
+    color: #f39c12; /* Change title color on hover */
+}
+
+article:hover p {
+    color: #444; /* Darker text color for paragraphs on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align footer text */
+    padding: 20px 0; /* Vertical padding */
+    margin-top: 50px; /* Margin above footer */
+}
+
+/* Footer paragraph styles */
+footer p {
+    font-size: 1rem; /* Font size for footer text */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        padding: 10px 0; /* Padding for vertical layout */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Margin between stacked items */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size for links */
+    }
+
+    #blog h1 {
+        font-size: 2.5rem; /* Smaller title size for mobile */
+    }
+
+    article h2 {
+        font-size: 1.8rem; /* Smaller article title size for mobile */
+    }
+
+    article p {
+        font-size: 1rem; /* Smaller paragraph size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px; /* Further decrease link font size for smaller screens */
+    }
+
+    #blog h1 {
+        font-size: 2rem; /* Even smaller title size for very small screens */
+    }
+
+    article h2 {
+        font-size: 1.5rem; /* Smaller article title size for very small screens */
+    }
+
+    article p {
+        font-size: 0.9rem; /* Smaller paragraph size for very small screens */
+    }
+}
